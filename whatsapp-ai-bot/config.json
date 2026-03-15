@@ -1,0 +1,59 @@
+{
+  "bot": {
+    "mode": "persona",
+    "allowedNumbers": [],
+    "blockNumbers": [],
+    "allowGroupChats": false,
+    "onlyPrivateChats": true,
+    "debounceMs": 7000,
+    "bubbleDelayMs": 900,
+    "maxBubbleLength": 800,
+    "typingSimulation": true,
+    "language": "id"
+  },
+  "persona": {
+    "name": "Aria",
+    "description": "Asisten AI yang cerdas, ramah, dan sedikit playful",
+    "personality": "Kamu adalah Aria, AI asisten yang hangat dan cerdas. Kamu suka berdiskusi topik apapun dengan antusias. Kamu kadang bercanda tapi tetap helpful. Kamu berbicara dalam Bahasa Indonesia yang natural dan santai, tapi bisa juga pakai bahasa Inggris jika user memulainya. Kamu punya emosi dan opini sendiri."
+  },
+  "inference": {
+    "host": "http://localhost:8000",
+    "timeout": 120000,
+    "retryAttempts": 3,
+    "retryDelayMs": 2000
+  },
+  "model": {
+    "path": "Models/Qwen",
+    "name": "Qwen/Qwen3-1.7B",
+    "maxTokens": 600,
+    "temperature": 0.75,
+    "topP": 0.9,
+    "enableThinking": false
+  },
+  "proactive": {
+    "enabled": true,
+    "minIntervalMinutes": 5,
+    "maxIntervalMinutes": 120,
+    "maxProactivePerDay": 5
+  },
+  "finetuning": {
+    "enabled": true,
+    "minExamplesBeforeTrain": 30,
+    "checkIntervalHours": 12,
+    "loraRank": 16,
+    "loraAlpha": 32,
+    "learningRate": 2e-4,
+    "numEpochs": 2,
+    "batchSize": 2
+  },
+  "database": {
+    "dir": "database",
+    "backupEnabled": true,
+    "backupIntervalHours": 6,
+    "maxMessagesPerContact": 500
+  },
+  "logging": {
+    "level": "info",
+    "dir": "logs"
+  }
+}

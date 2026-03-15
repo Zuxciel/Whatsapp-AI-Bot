@@ -1,0 +1,16 @@
+fastapi>=0.115.0
+uvicorn[standard]>=0.32.0
+# torch: install manual jika perlu CUDA (lihat README)
+torch>=2.3.0
+transformers>=4.47.0
+huggingface_hub>=0.26.0
+accelerate>=1.2.0
+peft>=0.14.0
+trl>=0.13.0
+datasets>=3.2.0
+sentencepiece>=0.2.0
+protobuf>=4.25.0
+scipy>=1.14.0
+pydantic>=2.10.0
+# Windows Python 3.10+ compatibility (ganti pyreadline lama)
+pyreadline3; sys_platform == "win32"
